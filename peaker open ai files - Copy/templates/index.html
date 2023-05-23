@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenAI Web App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>OpenAI Web App</h1>
+    <form action="/result" method="post">
+        <h2>Fill-up Questions:</h2>
+        <label for="age">age</label>
+        <input type="number" name="age" required><br>
+        <label for="weight">weight(in kg)</label>
+        <input type="number" name="weight" required><br>
+        <label for="height">height (in cm):</label>
+        <input type="number" name="height" required><br>
+
+        <h2>Multiple-Choice Questions:</h2>
+        <label for="gender">select gender</label>
+        <input type="radio" name="gender" value="male"> male
+        <input type="radio" name="gender" value="female"> female
+        
+        <br>
+        <label for="exer">how much you exercise?</label>
+        <input type="radio" name="exer" value="Daily"> daily
+        <input type="radio" name="exer" value="ocasionally"> occasionally
+        <input type="radio" name="exer" value="none"> none
+        <br>
+        <label for="answer6">Question 6: What is your favorite food?</label>
+        <input type="radio" name="answer6" value="Pizza"> Pizza
+        <input type="radio" name="answer6" value="Burger"> Burger
+        <input type="radio" name="answer6" value="Sushi"> Sushi
+        <br>
+        <label for="answer7">Question 7: Which season do you like the most?</label>
+        <input type="radio" name="answer7" value="Summer"> Summer
+        <input type="radio" name="answer7" value="Winter"> Winter
+        <input type="radio" name="answer7" value="Spring"> Spring
+        <br>
+
+        <input type="submit" value="Generate Result">
+    </form>
+</body>
+</html>
